@@ -47,8 +47,11 @@ body { width: 1080px; height: 1350px; background: #F5F6F8; padding: 50px; }
 .visual-label { position: absolute; bottom: 30px; right: 36px; font-size: 20px; color: #595757; font-weight: 700; }
 .kpi-row { display: flex; justify-content: space-around; align-items: center; width: 100%; }
 .kpi { text-align: center; }
-.kpi-num { font-size: 80px; font-weight: 800; line-height: 1; }
-.kpi-label { font-size: 18px; color: #595757; margin-top: 10px; font-weight: 600; }
+.kpi-num { font-size: 72px; font-weight: 800; line-height: 1.1; word-break: break-word; max-width: 280px; }
+.kpi-num.text { font-size: 36px; font-weight: 800; line-height: 1.15; }
+.kpi-num.text.long { font-size: 26px; }
+.kpi-num.text.xlong { font-size: 20px; }
+.kpi-label { font-size: 17px; color: #595757; margin-top: 12px; font-weight: 600; line-height: 1.4; max-width: 280px; }
 .quote { background: white; border-left: 4px solid #E9470B; border-radius: 10px; padding: 18px 22px; margin-bottom: 14px; font-size: 19px; color: #000000; line-height: 1.55; }
 .quote-source { font-size: 15px; color: #595757; margin-top: 8px; font-weight: 600; }
 .price-big { font-size: 120px; font-weight: 800; color: #E9470B; line-height: 1; text-align: center; }
@@ -76,9 +79,14 @@ body { width: 1080px; height: 1350px; background: #F5F6F8; padding: 50px; }
 .hs-col td { padding: 6px 8px; font-size: 14px; color: #000000; border-bottom: 1px solid #EFEEEE; }
 .hs-code { font-family: "SF Mono", "Consolas", monospace; font-weight: 700; color: #E9470B; width: 100px; }
 .hs-name { color: #595757; font-size: 13px; }
-.impact { background: #FAFAFA; border-left: 5px solid #E9470B; margin: 26px 40px; padding: 22px 26px; border-radius: 8px; }
-.impact-label { color: #E9470B; font-size: 18px; font-weight: 700; margin-bottom: 8px; }
-.impact-text { color: #000000; font-size: 21px; line-height: 1.65; }
+.impact { background: linear-gradient(135deg, #FAFAFA 0%, #FFF8F5 100%); border-left: 5px solid #E9470B; margin: 24px 36px; padding: 24px 28px; border-radius: 10px; box-shadow: 0 2px 8px rgba(233,71,11,0.06); }
+.impact-label { color: #E9470B; font-size: 20px; font-weight: 700; margin-bottom: 14px; display: flex; align-items: center; }
+.impact-label::before { content: '▎'; margin-right: 8px; font-size: 24px; line-height: 1; }
+.impact-text { color: #000000; font-size: 19px; line-height: 1.75; letter-spacing: 0.2px; }
+.impact-text p { margin: 0 0 10px 0; }
+.impact-text p:last-child { margin-bottom: 0; }
+.impact-text .hl { color: #E9470B; font-weight: 700; background: #FFF4F0; padding: 1px 8px; border-radius: 4px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+.impact-text .num { color: #E9470B; font-weight: 800; font-size: 21px; }
 .footer { margin-top: auto; padding: 18px 40px 26px; display: flex; justify-content: space-between; color: #595757; font-size: 15px; }
 .card-logo-wrap { text-align: right; padding: 0 40px 6px; }
 .card-logo { height: 44px; width: auto; }
@@ -92,7 +100,7 @@ body > div[class*="section"] { max-width: 1080px; margin: 24px auto; }
 .links-list { max-width: 1080px; margin: 24px auto 60px; padding: 32px; background: white; border-radius: 16px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
 .link-item { display: flex; align-items: flex-start; padding: 14px 0; border-bottom: 1px solid #EEE; font-size: 16px; line-height: 1.6; }
 .link-item:last-child { border-bottom: none; }
-.link-id { background: #595757; color: white; padding: 4px 12px; border-radius: 6px; font-size: 14px; font-weight: 700; margin-right: 16px; flex-shrink: 0; min-width: 80px; text-align: center; }
+.link-id { background: #595757; color: white; padding: 4px 12px; border-radius: 6px; font-size: 14px; font-weight: 700; margin-right: 16px; flex-shrink: 0; min-width: 110px; text-align: center; }
 .link-title { color: #333; flex: 1; }
 @media (max-width: 480px) { .page-divider { font-size: 16px !important; padding: 10px 16px !important; } .link-item { font-size: 14px !important; flex-direction: column; } .link-id { margin-bottom: 8px; align-self: flex-start; } }
 body { overflow-x: hidden; }
@@ -133,7 +141,7 @@ body { overflow-x: hidden; }
     </div>
   </div>
 
-  <div class="footer">数据源：本田动力 · 亿邦动力 × 马蹄社 EBRUN 全球好物访谈 · spoga+gafa 官方展会页 · NOAA Storm Prediction Center Day 1 Convective Outlook · Federal Register CPSC 频道 · Amazon US Best Sellers / Most Wished For：Walk-Behind Lawn Mowers · EIA《短期能源展望 STEO》　·　下次更新：明天 09:00</div>
+  <div class="footer">数据源：Amazon US Best Sellers / Most Wished For：Walk-Behind Lawn Mowers · EIA《短期能源展望 STEO》 · Federal Register CPSC 频道 · 本田动力 · NOAA Storm Prediction Center Day 1 Convective Outlook · spoga+gafa 官方展会页 · 亿邦动力 × 马蹄社 EBRUN 全球好物访谈　·　下次更新：明天 09:00</div>
 <div class="page-divider">A-01 · A 监管当周缺位</div>
   <div class="card">
     <div class="tag-bar">
@@ -147,11 +155,11 @@ body { overflow-x: hidden; }
     <div class="subtitle">Federal Register / CPSC / EU Safety Gate 当周（6/15-22）发布中无发电/割草机器人/水泵/草坪车品类直接对位</div>
     
         <div class="visual">
-          <div class="kpi-row"><div class="kpi"><div class="kpi-num" style="color:#595757">0</div><div class="kpi-label">当周 OPE 类直接对位新动作</div></div><div class="kpi"><div class="kpi-num" style="color:#595757">3</div><div class="kpi-label">Federal Register 当周其他类动作（纽扣电池/Daikin/床垫）</div></div><div class="kpi"><div class="kpi-num" style="color:#595757">诚实</div><div class="kpi-label">宁可留空，不编凑数</div></div></div>
+          <div class="kpi-row"><div class="kpi"><div class="kpi-num" style="color:#595757">0</div><div class="kpi-label">当周 OPE 类直接对位新动作</div></div><div class="kpi"><div class="kpi-num" style="color:#595757">3</div><div class="kpi-label">Federal Register 当周其他类动作（纽扣电池/Daikin/床垫）</div></div><div class="kpi"><div class="kpi-num text" style="color:#595757">诚实</div><div class="kpi-label">宁可留空，不编凑数</div></div></div>
         </div>
     <div class="impact">
       <div class="impact-label">对行业的影响</div>
-      <div class="impact-text">本周 Federal Register（6/15-22 北京时间）CPSC 当周发布 3 条均为非 OPE 类动作：06/15 纽扣电池安全标准信息收集申请、06/17 Daikin Comfort Technologies 850 万美元民事和解（与 HVAC 相关）、06/18 床垫易燃标准信息收集。CPSC 当周无割草机器人 / 发电机 / 水泵 / 草坪车 / 微耕机召回案例。EU Safety Gate 公共搜索接口（ec.europa.eu/safety-gate-alerts）当周需登录访问，本期无法实时抓取。EPA / CARB / EU Stage V 当周亦无 OPE 类排放新动作。**行业启示**：监管信号本身有时效性窗口——本批次 Federal Register 公开评论截止日 7 月中下旬的纽扣电池标准、欧盟 CE-RED 等延期决议将与割草机器人 / 储能锂电运输直接相关，建议持续监测；C-19 后海外召回申报节奏已恢复至疫前水平，但 CPSC 公开披露存在 5-10 天滞后，需结合 SaferProducts.gov 早期事故报告补全。</div>
+      <div class="impact-text">本周 Federal Register（6/15-22 北京时间）CPSC 当周发布 3 条均为非 OPE 类动作：06/15 纽扣电池安全标准信息收集申请、06/17 Daikin Comfort Technologies 850 万美元民事和解（与 HVAC 相关）、06/18 床垫易燃标准信息收集。CPSC 当周无割草机器人 / 发电机 / 水泵 / 草坪车 / 微耕机召回案例。EU Safety Gate 公共搜索接口（ec.europa.eu/safety-gate-alerts）当周需登录访问，本期无法实时抓取。EPA / CARB / EU Stage V 当周亦无 OPE 类排放新动作。<p><span class="hl">行业启示</span>：监管信号本身有时效性窗口——本批次 Federal Register 公开评论截止日 7 月中下旬的纽扣电池标准、欧盟 CE-RED 等延期决议将与割草机器人 / 储能锂电运输直接相关，建议持续监测；C-19 后海外召回申报节奏已恢复至疫前水平，但 CPSC 公开披露存在 5-10 天滞后，需结合 SaferProducts.gov 早期事故报告补全。</p></div>
     </div>
     <div class="footer">
       <span>数据源：Federal Register CPSC 频道（federalregister.gov/agencies/consumer-product-safety-commission，2026-06-22 当周核对）</span>
@@ -171,11 +179,11 @@ body { overflow-x: hidden; }
     <div class="subtitle">2026-06-08 本田动力（中国）官方公告；自 2023 年 2,000 万台以来约 3 年再增 500 万</div>
     
         <div class="visual">
-          <div class="kpi-row"><div class="kpi"><div class="kpi-num" style="color:#E9470B">2,500万</div><div class="kpi-label">Honda 中国通机累计销量</div></div><div class="kpi"><div class="kpi-num" style="color:#595757">60+</div><div class="kpi-label">出口国家与地区</div></div><div class="kpi"><div class="kpi-num" style="color:#595757">3 年</div><div class="kpi-label">从 2,000 万→2,500 万用时</div></div></div>
+          <div class="kpi-row"><div class="kpi"><div class="kpi-num" style="color:#E9470B">2,500万</div><div class="kpi-label">Honda 中国通机累计销量</div></div><div class="kpi"><div class="kpi-num" style="color:#595757">60+</div><div class="kpi-label">出口国家与地区</div></div><div class="kpi"><div class="kpi-num text" style="color:#595757">3 年</div><div class="kpi-label">从 2,000 万→2,500 万用时</div></div></div>
         </div>
     <div class="impact">
       <div class="impact-label">对行业的影响</div>
-      <div class="impact-text">Honda 在中国本土生产 + 全球出口的通机版图已站稳第二梯队前列；产品矩阵覆盖通用汽油发动机、水泵、发电机、割草机、微耕机、船外机六大品类。行业启示：日系品牌的中国本土化产能 + 全球渠道是中国出海品牌的主要对位参照；建议在'多品类协同 + 60+ 国家渠道经验'两个维度上对位 Honda 的运营优势。</div>
+      <div class="impact-text"><p>Honda 在中国本土生产 + 全球出口的通机版图已站稳第二梯队前列；产品矩阵覆盖通用汽油发动机、水泵、发电机、割草机、微耕机、船外机六大品类。行业启示：日系品牌的中国本土化产能 + 全球渠道是中国出海品牌的主要对位参照；建议在'多品类协同 + 60+ 国家渠道经验'两个维度上对位 Honda 的运营优势。</p></div>
     </div>
     <div class="footer">
       <span>数据源：本田动力（中国）有限公司官方公告（2026-06-08）</span>
@@ -199,7 +207,7 @@ body { overflow-x: hidden; }
         </div>
     <div class="impact">
       <div class="impact-label">对行业的影响</div>
-      <div class="impact-text">MOVA 2020 年创立，2025 年首款智能割草机器人上市，1 年内做到欧洲品类领跑。三档价位策略：2000 欧塔尖（雷达定位 + 双目 + 四驱 + 双刀盘 + 切边，行业首创）→ 1000-1500 欧腰部（首款年销七八万台）→ 500 欧底座（双目视觉入门）。市场爆发：德国亚马逊 +2360%、意大利 +1290%、BAUHAUS 长期销量第一；美国 LiDAX Ultra 上市 3 个月登顶亚马逊 Best Sellers 第一。技术路线选激光雷达（vs 先行者 Husqvarna RTK），核心逻辑是'用户体验而非技术参数'——开箱即用、不插杆、不拉线、不用 RTK 基站，绕开 10-20% 退货率痛点。行业启示：1) 欧洲庭院场景对智能割草机器人需求是真实的（2000 欧价位已有 10-20% 退货说明'插杆'是体验门槛）；2) 激光雷达成本随出货量从 2000+ 压到 500+ 块，是供应链 + 量级护城河；3) 1000 欧价位带是欧洲主流用户切入点（对标 600 平庭院年雇人割草 600-1000 欧费用）。</div>
+      <div class="impact-text"><p>MOVA 2020 年创立，2025 年首款智能割草机器人上市，1 年内做到欧洲品类领跑。三档价位策略：2000 欧塔尖（雷达定位 + 双目 + 四驱 + 双刀盘 + 切边，行业首创）→ 1000-1500 欧腰部（首款年销七八万台）→ 500 欧底座（双目视觉入门）。市场爆发：德国亚马逊 <span class="num">+2360%</span>、意大利 <span class="num">+1290%</span>、BAUHAUS 长期销量第一；美国 LiDAX Ultra 上市 3 个月登顶亚马逊 Best Sellers 第一。技术路线选激光雷达（vs 先行者 Husqvarna RTK），核心逻辑是'用户体验而非技术参数'——开箱即用、不插杆、不拉线、不用 RTK 基站，绕开 10<span class="num">-20%</span> 退货率痛点。行业启示：1) 欧洲庭院场景对智能割草机器人需求是真实的（2000 欧价位已有 10<span class="num">-20%</span> 退货说明'插杆'是体验门槛）；2) 激光雷达成本随出货量从 2000+ 压到 500+ 块，是供应链 + 量级护城河；3) 1000 欧价位带是欧洲主流用户切入点（对标 600 平庭院年雇人割草 600-1000 欧费用）。</p></div>
     </div>
     <div class="footer">
       <span>数据源：亿邦动力 × 马蹄社 EBRUN 全球好物访谈（2026-06-22 16:03 北京时间发布，腾讯新闻原文 news.qq.com/rain/a/20260622A09DT200）</span>
@@ -223,7 +231,7 @@ body { overflow-x: hidden; }
         </div>
     <div class="impact">
       <div class="impact-label">对行业的影响</div>
-      <div class="impact-text">EIA 2026-06-09 发布的 STEO 报告核心信号：①2026 夏季美国电力需求因高温 + AI 数据中心驱动同比 +3%（2026E 总需求 4.248 万亿 kWh，2027E 4.379 万亿 kWh）；②2027 商业用电首次超过居民用电——AI 数据中心是核心拉动；③太阳能 +19% / 风电 +10% 是新增主力，煤炭 -2%，天然气持平；④霍尔木兹海峡中断背景下，Brent 油价 2026E $95 / 桶（2027E 回落至 $79）。对位启示：美国电力需求结构性增长 + 可再生能源渗透加速 + 燃油价格高位震荡，对便携发电 + 备用电源 + 太阳能混合系统品类形成中长期需求支撑。</div>
+      <div class="impact-text"><p>EIA 2026-06-09 发布的 STEO 报告核心信号：①2026 夏季美国电力需求因高温 + AI 数据中心驱动同比 <span class="num">+3%</span>（2026E 总需求 4.248 万亿 kWh，2027E 4.379 万亿 kWh）；②2027 商业用电首次超过居民用电——AI 数据中心是核心拉动；③太阳能 <span class="num">+19%</span> / 风电 <span class="num">+10%</span> 是新增主力，煤炭 <span class="num">-2%</span>，天然气持平；④霍尔木兹海峡中断背景下，Brent 油价 2026E $95 / 桶（2027E 回落至 $79）。对位启示：美国电力需求结构性增长 + 可再生能源渗透加速 + 燃油价格高位震荡，对便携发电 + 备用电源 + 太阳能混合系统品类形成中长期需求支撑。</p></div>
     </div>
     <div class="footer">
       <span>数据源：EIA《短期能源展望 STEO》（2026-06-09 发布，Forecast Completed 2026-06-04）</span>
@@ -243,11 +251,11 @@ body { overflow-x: hidden; }
     <div class="subtitle">Amazon US Walk-Behind Lawn Mowers Best Sellers / Most Wished For 2026-06-22 实时榜前 6 名</div>
     
         <div class="visual">
-          <div class="kpi-row"><div class="kpi"><div class="kpi-num" style="color:#E9470B">Greenworks</div><div class="kpi-label">40V 16" Cordless 长期榜首</div></div><div class="kpi"><div class="kpi-num" style="color:#E9470B">EGO Power+</div><div class="kpi-label">LM2125SP 21" 56V 紧追其后</div></div><div class="kpi"><div class="kpi-num" style="color:#595757">Husqvarna</div><div class="kpi-label">Automower 430X 进前 10</div></div></div>
+          <div class="kpi-row"><div class="kpi"><div class="kpi-num text long" style="color:#E9470B">Greenworks</div><div class="kpi-label">40V 16" Cordless 长期榜首</div></div><div class="kpi"><div class="kpi-num text long" style="color:#E9470B">EGO Power+</div><div class="kpi-label">LM2125SP 21" 56V 紧追其后</div></div><div class="kpi"><div class="kpi-num text long" style="color:#595757">Husqvarna</div><div class="kpi-label">Automower 430X 进前 10</div></div></div>
         </div>
     <div class="impact">
       <div class="impact-label">对行业的影响</div>
-      <div class="impact-text">Amazon US 2026-06-22 实时榜单（步行式割草机 Best Sellers + Most Wished For）显示三梯队格局：①Greenworks 40V 16" Cordless 长期占据榜首（Best Sellers #1 + Most Wished For #1）+ Greenworks 60V 21" Self-Propelled 上榜（Most Wished For #3）；②EGO Power+ LM2125SP 21-Inch 56V + LM2114SP 21" Self-Propelled 双双上榜（Best Sellers #2 + Most Wished For #2）；③Husqvarna Automower 430X（GPS 辅助导航，超静音智能割草机器人）进入 Most Wished For 前 10。对位启示：1) Greenworks 在北美 cordless 步行式割草机品类已经实现品牌压顶（与 MOVA 在欧洲的激光雷达割草机器人策略形成有趣对照）；2) EGO 56V 平台继续在 21" 大尺寸段领跑，是高端 cordless 头部玩家；3) Husqvarna Automower 在 Wish List 维度持续吸粉（说明消费者在研究阶段），但 Best Sellers 实际转化受 RTK 体验门槛制约（10-20% 退货率，MOVA 访谈印证）。</div>
+      <div class="impact-text"><p>Amazon US 2026-06-22 实时榜单（步行式割草机 Best Sellers + Most Wished For）显示三梯队格局：①Greenworks 40V 16" Cordless 长期占据榜首（Best Sellers #1 + Most Wished For #1）+ Greenworks 60V 21" Self-Propelled 上榜（Most Wished For #3）；②EGO Power+ LM2125SP 21-Inch 56V + LM2114SP 21" Self-Propelled 双双上榜（Best Sellers #2 + Most Wished For #2）；③Husqvarna Automower 430X（GPS 辅助导航，超静音智能割草机器人）进入 Most Wished For 前 10。对位启示：1) Greenworks 在北美 cordless 步行式割草机品类已经实现品牌压顶（与 MOVA 在欧洲的激光雷达割草机器人策略形成有趣对照）；2) EGO 56V 平台继续在 21" 大尺寸段领跑，是高端 cordless 头部玩家；3) Husqvarna Automower 在 Wish List 维度持续吸粉（说明消费者在研究阶段），但 Best Sellers 实际转化受 RTK 体验门槛制约（10<span class="num">-20%</span> 退货率，MOVA 访谈印证）。</p></div>
     </div>
     <div class="footer">
       <span>数据源：Amazon US Best Sellers / Most Wished For：Walk-Behind Lawn Mowers（2026-06-22 北京时间实时抓取）</span>
@@ -267,11 +275,11 @@ body { overflow-x: hidden; }
     <div class="subtitle">东南部到 Mid-Atlantic / 中北部高原 / ArkLaTex，可能出现破坏性大风 + 大冰雹 + 局部龙卷风</div>
     
         <div class="visual">
-          <div class="kpi-row"><div class="kpi"><div class="kpi-num" style="color:#E9470B">3</div><div class="kpi-label">SLIGHT RISK 区域数</div></div><div class="kpi"><div class="kpi-num" style="color:#E9470B">SLIGHT</div><div class="kpi-label">NOAA 风险等级（5 级中的 2 级）</div></div><div class="kpi"><div class="kpi-num" style="color:#595757">06/22</div><div class="kpi-label">0600 UTC 当日发布</div></div></div>
+          <div class="kpi-row"><div class="kpi"><div class="kpi-num" style="color:#E9470B">3</div><div class="kpi-label">SLIGHT RISK 区域数</div></div><div class="kpi"><div class="kpi-num text" style="color:#E9470B">SLIGHT</div><div class="kpi-label">NOAA 风险等级（5 级中的 2 级）</div></div><div class="kpi"><div class="kpi-num" style="color:#595757">06/22</div><div class="kpi-label">0600 UTC 当日发布</div></div></div>
         </div>
     <div class="impact">
       <div class="impact-label">对行业的影响</div>
-      <div class="impact-text">NOAA SPC 当日发布的 Day 1 Convective Outlook 标记三个 SLIGHT RISK 区域：①东南部到 Mid-Atlantic（damaging winds + 局部龙卷风可能）；②中北部高原（supercells + 大冰雹 + 局部龙卷风可能）；③ArkLaTex（局部破坏性大风）。行业启示：当日强对流天气主要影响美国中部到东南部；这些区域的渠道便携发电 / 备用电源短期需求可能出现脉冲（参考 2024 Helene 后遗症），建议关注 Amazon Home Depot 渠道 6/22-6/30 销量信号。</div>
+      <div class="impact-text"><p>NOAA SPC 当日发布的 Day 1 Convective Outlook 标记三个 SLIGHT RISK 区域：①东南部到 Mid-Atlantic（damaging winds + 局部龙卷风可能）；②中北部高原（supercells + 大冰雹 + 局部龙卷风可能）；③ArkLaTex（局部破坏性大风）。行业启示：当日强对流天气主要影响美国中部到东南部；这些区域的渠道便携发电 / 备用电源短期需求可能出现脉冲（参考 2024 Helene 后遗症），建议关注 Amazon Home Depot 渠道 6/22-6/30 销量信号。</p></div>
     </div>
     <div class="footer">
       <span>数据源：NOAA Storm Prediction Center Day 1 Convective Outlook（2026-06-22 0600 UTC 发布）</span>
@@ -295,13 +303,30 @@ body { overflow-x: hidden; }
         </div>
     <div class="impact">
       <div class="impact-label">对行业的影响</div>
-      <div class="impact-text">spoga+gafa 是欧洲花园生活方式和 BBQ 行业全球第一展（始于 1960 年），2026 年首次采用新主题概念（growing forward），新增 Garden Sourcing Hub + Flavour Market。展会主题世界包括 Living / Creation & Care / BBQ / Outdoor Adventure。展商如 FULBAT（法国电池厂商）已在展会前发布完整展品预告，包括 2026 新品 AIRBOOST + FULBANK F2 CHARGER + FULLOAD F10 CHARGER（Hall 6.1 / Stand C-32）。行业启示：spoga+gafa 与北美 Equip Exposition（原 GIE+EXPO，10 月 Louisville）并列为全球 OPE 两大展，是每年欧洲 OPE 新品首发主战场；中国出海品牌（Greenworks / EGO Power+ Chervon / 格力博等）通常在此发布当年秋季新品。**观察重点**：Husqvarna Automower 新机型 / STIHL iMow 升级 / Bosch Indego 海外渠道扩张 / Gardena（现 Husqvarna Group）智能割草机器人欧洲价格策略——这些直接对位海外销售部关注。</div>
+      <div class="impact-text">spoga+gafa 是欧洲花园生活方式和 BBQ 行业全球第一展（始于 1960 年），2026 年首次采用新主题概念（growing forward），新增 Garden Sourcing Hub + Flavour Market。展会主题世界包括 Living / Creation & Care / BBQ / Outdoor Adventure。展商如 FULBAT（法国电池厂商）已在展会前发布完整展品预告，包括 2026 新品 AIRBOOST + FULBANK F2 CHARGER + FULLOAD F10 CHARGER（Hall 6.1 / Stand C-32）。行业启示：spoga+gafa 与北美 Equip Exposition（原 GIE+EXPO，10 月 Louisville）并列为全球 OPE 两大展，是每年欧洲 OPE 新品首发主战场；中国出海品牌（Greenworks / EGO Power+ Chervon / 格力博等）通常在此发布当年秋季新品。<p><span class="hl">观察重点</span>：Husqvarna Automower 新机型 / STIHL iMow 升级 / Bosch Indego 海外渠道扩张 / Gardena（现 Husqvarna Group）智能割草机器人欧洲价格策略——这些直接对位海外销售部关注。</p></div>
     </div>
     <div class="footer">
       <span>数据源：spoga+gafa 官方展会页（spogagafa.com，2026-06-22 当周核实）+ FULBAT 展前预告（fulbat.com）</span>
       <span>隆鑫通机 · 产品策划部　·　下次更新：明天 09:00</span>
     </div>
   </div>
-<div class="page-divider">链接清单（原文 URL）</div><div class="links-list"></div>
+<div class="page-divider">链接清单（原文 URL）</div><div class="links-list"><div class="link-item"><span class="link-id">A-01</span><span class="link-title">Federal Register CPSC 频道（当周 06/15-22 无 OPE 类直接对位）</span></div>
+<div class="link-item"><span class="link-id">A-01-extra</span><span class="link-title">EU Safety Gate 危险产品快速预警系统</span></div>
+<div class="link-item"><span class="link-id">A-01-extra2</span><span class="link-title">SaferProducts.gov（CPSC 早期事故信号）</span></div>
+<div class="link-item"><span class="link-id">A-01-extra3</span><span class="link-title">CPSC Recall API（saferproducts.gov/RestWebServices/Recall）</span></div>
+<div class="link-item"><span class="link-id">A-01-extra4</span><span class="link-title">EU Stage V 非道路移动机械排放标准</span></div>
+<div class="link-item"><span class="link-id">B-01</span><span class="link-title">本田动力(中国) 通机累计销量突破 2,500 万台</span></div>
+<div class="link-item"><span class="link-id">B-03</span><span class="link-title">MOVA 李建访谈：把智能割草机器人做到全球市占率第一</span></div>
+<div class="link-item"><span class="link-id">B-05-extra</span><span class="link-title">申昊科技（300853）11.67 亿元订单 + 异动公告（6/12 + 6/17，杭州电力巡检机器人，非直接对位）</span></div>
+<div class="link-item"><span class="link-id">C-01-extra</span><span class="link-title">EasyLawnMowing LUBA Mini 2 AWD 1500 测评（2026-06-03，6 月初当周）</span></div>
+<div class="link-item"><span class="link-id">D-01</span><span class="link-title">EIA Short-Term Energy Outlook（2026-06-09）</span></div>
+<div class="link-item"><span class="link-id">D-02</span><span class="link-title">Amazon Best Sellers: Walk-Behind Lawn Mowers</span></div>
+<div class="link-item"><span class="link-id">D-02-extra</span><span class="link-title">Amazon Most Wished For: Lawn Mowers & Tractors</span></div>
+<div class="link-item"><span class="link-id">E-01</span><span class="link-title">NOAA SPC Day 1 Convective Outlook（实时强对流预警）</span></div>
+<div class="link-item"><span class="link-id">E-01-extra</span><span class="link-title">NOAA NHC（实时飓风 / 热带气旋监测）</span></div>
+<div class="link-item"><span class="link-id">E-01-extra2</span><span class="link-title">NOAA 2026 Atlantic Hurricane Season Outlook（5-22 发布）</span></div>
+<div class="link-item"><span class="link-id">F-01</span><span class="link-title">spoga+gafa 2026 官方页（Cologne 6/22-24）</span></div>
+<div class="link-item"><span class="link-id">F-01-extra</span><span class="link-title">FULBAT 展前预告（Hall 6.1 / Stand C-32）</span></div>
+</div>
 </body>
 </html>
