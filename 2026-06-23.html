@@ -6,78 +6,181 @@
 <title>通机行业每日简报 · 2026-06-23 · 周二 · 北京时间</title>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: "Microsoft YaHei", "PingFang SC", -apple-system, sans-serif; }
-body { width: 1080px; min-height: 1920px; background: #F5F6F8; padding: 60px 50px; }
-.header { text-align: center; margin-bottom: 40px; background: #E9470B; padding: 36px 20px; border-radius: 24px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
-.header .brand-text { color: white; }
-.brand-line { display: flex; align-items: center; justify-content: center; gap: 16px; margin-bottom: 14px; }
-.brand-bar { width: 50px; height: 6px; background: #E9470B; }
-.brand-text { color: #595757; font-size: 32px; font-weight: 700; letter-spacing: 4px; }
-.date { color: #595757; font-size: 22px; }
-.divider { width: 60px; height: 2px; background: #E9470B; margin: 16px auto 0; }
-.logo-wrap { text-align: center; margin: 22px auto 12px; }
-.logo-img { height: 88px; width: auto; display: inline-block; }
-.signature { color: #595757; font-size: 16px; letter-spacing: 6px; margin-top: 6px; opacity: 0.7; }
-.section { background: white; border-radius: 24px; padding: 40px 36px; margin-bottom: 28px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
-.section-title { font-size: 30px; font-weight: 700; color: #595757; margin-bottom: 24px; display: flex; align-items: center; }
-.section-title::before { content: ''; display: inline-block; width: 8px; height: 30px; background: #E9470B; margin-right: 14px; border-radius: 2px; }
-.top5-item { display: flex; align-items: flex-start; margin-bottom: 20px; font-size: 22px; line-height: 1.6; color: #000000; }
-.top5-num { color: #E9470B; font-weight: 700; font-size: 28px; min-width: 44px; }
-.signal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-.signal-card { background: #595757; padding: 22px 24px; border-radius: 14px; color: white; }
+html, body { width: 100%; max-width: 100%; overflow-x: hidden; }
+body { background: #F5F6F8; padding: 20px 14px; min-height: 100vh; }
+
+/* === 顶部品牌区 === */
+.header { text-align: center; margin-bottom: 24px; background: #E9470B; padding: 24px 16px; border-radius: 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+.brand-line { display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 10px; }
+.brand-bar { width: 32px; height: 4px; background: #E9470B; }
+.brand-text { color: #595757; font-size: 16px; font-weight: 700; letter-spacing: 2px; }
+.date { color: #595757; font-size: 14px; margin-top: 8px; }
+.divider { width: 50px; height: 2px; background: #E9470B; margin: 12px auto 0; }
+.logo-wrap { text-align: center; margin: 16px auto 8px; }
+.logo-img { height: 56px; width: auto; display: inline-block; }
+.signature { color: #595757; font-size: 11px; letter-spacing: 3px; margin-top: 4px; opacity: 0.7; }
+
+/* === 通用 section === */
+.section { background: white; border-radius: 16px; padding: 24px 18px; margin-bottom: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+.section-title { font-size: 20px; font-weight: 700; color: #595757; margin-bottom: 16px; display: flex; align-items: center; }
+.section-title::before { content: ''; display: inline-block; width: 6px; height: 20px; background: #E9470B; margin-right: 10px; border-radius: 2px; }
+
+/* === Top 5 === */
+.top5-item { display: flex; align-items: flex-start; margin-bottom: 14px; font-size: 14px; line-height: 1.55; color: #000000; word-break: break-word; overflow-wrap: anywhere; }
+.top5-num { color: #E9470B; font-weight: 700; font-size: 18px; min-width: 30px; flex-shrink: 0; }
+
+/* === 6 板块信号 (单列, 移动端友好) === */
+.signal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.signal-card { background: #595757; padding: 12px 14px; border-radius: 10px; color: white; }
 .signal-card.peak { background: #E9470B; }
-.signal-name { font-size: 22px; font-weight: 700; margin-bottom: 6px; }
-.signal-count { font-size: 18px; opacity: 0.85; }
-.action-box { background: #FBDCCD; border-left: 6px solid #E9470B; padding: 26px 30px; border-radius: 12px; }
-.action-label { color: #E9470B; font-size: 20px; font-weight: 700; margin-bottom: 10px; }
-.action-text { color: #000000; font-size: 22px; line-height: 1.65; font-weight: 500; }
+.signal-name { font-size: 13px; font-weight: 700; margin-bottom: 4px; line-height: 1.3; }
+.signal-count { font-size: 11px; opacity: 0.85; }
 
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: "Microsoft YaHei", "PingFang SC", -apple-system, sans-serif; }
-body { width: 1080px; min-height: 1350px; background: #F5F6F8; padding: 50px; }
-.card { background: white; border-radius: 24px; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 6px 24px rgba(0,0,0,0.08); margin-bottom: 32px; }
-.tag-bar { background: #595757; color: white; padding: 18px 36px; display: flex; justify-content: space-between; align-items: center; }
-.tag-name { font-size: 24px; font-weight: 700; letter-spacing: 2px; }
-.tag-id { font-size: 16px; opacity: 0.85; }
-.title { font-size: 38px; font-weight: 800; color: #000000; line-height: 1.3; padding: 32px 40px 14px; }
-.subtitle { font-size: 22px; color: #595757; line-height: 1.6; padding: 0 40px 26px; }
-.visual { margin: 0 40px; min-height: 360px; background: #FBDCCD; border-radius: 20px; display: flex; align-items: center; justify-content: center; position: relative; padding: 30px; overflow: hidden; }
-.visual-num { font-size: 200px; font-weight: 800; color: #E9470B; line-height: 1; }
-.visual-label { position: absolute; bottom: 30px; right: 36px; font-size: 20px; color: #595757; font-weight: 700; }
-.kpi-row { display: flex; justify-content: space-around; align-items: center; width: 100%; }
-.kpi { text-align: center; }
-.kpi-num { font-size: 72px; font-weight: 800; line-height: 1.1; word-break: break-word; max-width: 280px; }
-.kpi-num.text { font-size: 36px; font-weight: 800; line-height: 1.15; }
-.kpi-num.text.long { font-size: 26px; }
-.kpi-num.text.xlong { font-size: 20px; }
-.kpi-label { font-size: 17px; color: #595757; margin-top: 12px; font-weight: 600; line-height: 1.4; max-width: 280px; }
-.quote { background: white; border-left: 4px solid #E9470B; border-radius: 10px; padding: 18px 22px; margin-bottom: 14px; font-size: 19px; color: #000000; line-height: 1.55; }
-.quote-source { font-size: 15px; color: #595757; margin-top: 8px; font-weight: 600; }
-.impact { background: linear-gradient(135deg, #FAFAFA 0%, #FFF8F5 100%); border-left: 5px solid #E9470B; margin: 24px 36px; padding: 24px 28px; border-radius: 10px; box-shadow: 0 2px 8px rgba(233,71,11,0.06); }
-.impact-label { color: #E9470B; font-size: 20px; font-weight: 700; margin-bottom: 14px; display: flex; align-items: center; }
-.impact-label::before { content: '▎'; margin-right: 8px; font-size: 24px; line-height: 1; }
-.impact-text { color: #000000; font-size: 19px; line-height: 1.75; letter-spacing: 0.2px; }
-.impact-text p { margin: 0 0 10px 0; }
+/* === 行动观察 === */
+.action-box { background: #FBDCCD; border-left: 5px solid #E9470B; padding: 18px 18px; border-radius: 10px; }
+.action-label { color: #E9470B; font-size: 14px; font-weight: 700; margin-bottom: 8px; }
+.action-text { color: #000000; font-size: 13px; line-height: 1.65; font-weight: 500; word-break: break-word; overflow-wrap: anywhere; }
+
+/* === 卡片 (单卡) === */
+.card { background: white; border-radius: 16px; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 6px 24px rgba(0,0,0,0.08); margin-bottom: 24px; word-break: break-word; overflow-wrap: anywhere; }
+.tag-bar { background: #595757; color: white; padding: 12px 18px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px; }
+.tag-name { font-size: 14px; font-weight: 700; letter-spacing: 1px; }
+.tag-id { font-size: 11px; opacity: 0.85; }
+.title { font-size: 19px; font-weight: 800; color: #000000; line-height: 1.35; padding: 18px 18px 10px; word-break: break-word; overflow-wrap: anywhere; }
+.subtitle { font-size: 13px; color: #595757; line-height: 1.55; padding: 0 18px 16px; word-break: break-word; overflow-wrap: anywhere; }
+.card-logo-wrap { text-align: right; padding: 0 18px 4px; }
+.card-logo { height: 30px; width: auto; }
+
+/* === Visual / KPI (核心修复: 数字字号大幅缩小, kpi-row wrap) === */
+.visual { margin: 0 18px; min-height: 200px; background: #FBDCCD; border-radius: 14px; display: flex; align-items: center; justify-content: center; position: relative; padding: 16px; overflow: hidden; }
+.visual-num { font-size: 100px; font-weight: 800; color: #E9470B; line-height: 1; }
+.visual-label { position: absolute; bottom: 16px; right: 20px; font-size: 12px; color: #595757; font-weight: 700; }
+.kpi-row { display: flex; flex-wrap: wrap; justify-content: space-around; align-items: flex-start; width: 100%; gap: 16px 8px; }
+.kpi { text-align: center; min-width: 0; flex: 0 1 calc(50% - 4px); }
+.kpi-num { font-size: 22px; font-weight: 800; line-height: 1.2; word-break: keep-all; overflow-wrap: break-word; max-width: 100%; }
+.kpi-num.text { font-size: 15px; font-weight: 800; line-height: 1.2; }
+.kpi-num.text.long { font-size: 13px; line-height: 1.2; }
+.kpi-num.text.xlong { font-size: 11px; line-height: 1.25; }
+.kpi-label { font-size: 10px; color: #595757; margin-top: 4px; font-weight: 600; line-height: 1.3; word-break: keep-all; overflow-wrap: break-word; max-width: 100%; }
+
+/* === Impact === */
+.impact { background: linear-gradient(135deg, #FAFAFA 0%, #FFF8F5 100%); border-left: 4px solid #E9470B; margin: 16px 18px; padding: 16px 16px; border-radius: 10px; box-shadow: 0 2px 8px rgba(233,71,11,0.06); }
+.impact-label { color: #E9470B; font-size: 14px; font-weight: 700; margin-bottom: 10px; display: flex; align-items: center; }
+.impact-label::before { content: '▎'; margin-right: 6px; font-size: 18px; line-height: 1; }
+.impact-text { color: #000000; font-size: 13px; line-height: 1.7; letter-spacing: 0.2px; word-break: break-word; overflow-wrap: anywhere; }
+.impact-text p { margin: 0 0 8px 0; }
 .impact-text p:last-child { margin-bottom: 0; }
-.impact-text .hl { color: #E9470B; font-weight: 700; background: #FFF4F0; padding: 1px 8px; border-radius: 4px; }
-.impact-text .num { color: #E9470B; font-weight: 800; font-size: 21px; }
-.card-footer { margin-top: auto; padding: 18px 40px 26px; display: flex; justify-content: space-between; color: #595757; font-size: 15px; }
-.card-logo-wrap { text-align: right; padding: 0 40px 6px; }
-.card-logo { height: 44px; width: auto; }
+.impact-text .hl { color: #E9470B; font-weight: 700; background: #FFF4F0; padding: 0 4px; border-radius: 3px; }
+.impact-text .num { color: #E9470B; font-weight: 800; font-size: 14px; }
+.card-footer { margin-top: auto; padding: 12px 18px 16px; display: flex; justify-content: space-between; color: #595757; font-size: 11px; gap: 8px; flex-wrap: wrap; }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { width: 100%; max-width: 1200px; margin: 0 auto; background: #F5F5F5; font-family: "Microsoft YaHei", "PingFang SC", -apple-system, sans-serif; }
-.page-divider { background: #E9470B; color: white; padding: 14px 30px; margin: 40px auto 0; font-size: 22px; font-weight: 700; border-radius: 12px; max-width: 1080px; box-shadow: 0 2px 12px rgba(233,71,11,0.3); }
-.links-list { max-width: 1080px; margin: 24px auto 60px; padding: 32px; background: white; border-radius: 16px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
-.link-item { display: flex; align-items: flex-start; padding: 14px 0; border-bottom: 1px solid #EEE; font-size: 16px; line-height: 1.6; text-decoration: none; color: #333; transition: background 0.15s; }
+/* === 链接清单 (单列) === */
+.links-list { background: white; border-radius: 16px; padding: 20px 16px; margin-bottom: 40px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+.link-item { display: flex; align-items: flex-start; padding: 10px 0; border-bottom: 1px solid #EEE; font-size: 12px; line-height: 1.5; text-decoration: none; color: #333; transition: background 0.15s; word-break: break-word; overflow-wrap: anywhere; }
 .link-item:hover { background: #FBDCCD; }
 .link-item:hover .link-title { color: #E9470B; }
 .link-item:hover .link-arrow { opacity: 1; transform: translateX(0); }
 .link-item:last-child { border-bottom: none; }
-.link-id { background: #595757; color: white; padding: 4px 12px; border-radius: 6px; font-size: 14px; font-weight: 700; margin-right: 16px; flex-shrink: 0; min-width: 110px; text-align: center; }
+.link-id { background: #595757; color: white; padding: 3px 8px; border-radius: 4px; font-size: 10px; font-weight: 700; margin-right: 10px; flex-shrink: 0; min-width: 80px; text-align: center; }
 .link-title { color: #333; flex: 1; }
-.link-arrow { color: #E9470B; font-weight: 700; margin-left: 8px; opacity: 0.4; transition: all 0.2s; transform: translateX(-4px); }
-@media (max-width: 1080px) { body { padding: 30px 16px !important; } .header { padding: 24px 16px !important; } .section { padding: 28px 20px !important; } }
-@media (max-width: 480px) { .top5-item { font-size: 16px !important; } .top5-num { font-size: 22px !important; min-width: 32px !important; } .title { font-size: 26px !important; padding: 20px 24px 10px !important; } .subtitle { font-size: 16px !important; padding: 0 24px 16px !important; } .visual { margin: 0 24px !important; padding: 20px !important; min-height: 240px !important; } .kpi-num { font-size: 48px !important; } .kpi-num.text { font-size: 22px !important; } .kpi-num.text.long { font-size: 18px !important; } .kpi-num.text.xlong { font-size: 16px !important; } .kpi-label { font-size: 13px !important; } .impact { margin: 16px 24px !important; padding: 16px 18px !important; } .impact-text { font-size: 15px !important; } .link-item { font-size: 14px !important; flex-direction: column; } .link-id { margin-bottom: 8px; align-self: flex-start; } .page-divider { font-size: 18px !important; padding: 12px 16px !important; } }
-body { overflow-x: hidden; }
+.link-arrow { color: #E9470B; font-weight: 700; margin-left: 4px; opacity: 0.4; transition: all 0.2s; transform: translateX(-4px); flex-shrink: 0; }
+
+.page-divider { background: #E9470B; color: white; padding: 10px 16px; margin: 24px 0 16px; font-size: 14px; font-weight: 700; border-radius: 10px; text-align: center; box-shadow: 0 2px 12px rgba(233,71,11,0.3); }
+
+/* === 中等屏幕 (平板, 768px+) === */
+@media (min-width: 768px) {
+  body { padding: 30px 24px; }
+  .header { padding: 32px 24px; border-radius: 20px; margin-bottom: 32px; }
+  .brand-text { font-size: 22px; }
+  .brand-bar { width: 40px; }
+  .date { font-size: 16px; }
+  .logo-img { height: 70px; }
+  .signature { font-size: 13px; }
+  .section { padding: 30px 26px; margin-bottom: 24px; border-radius: 20px; }
+  .section-title { font-size: 24px; margin-bottom: 18px; }
+  .top5-item { font-size: 16px; margin-bottom: 16px; }
+  .top5-num { font-size: 22px; min-width: 36px; }
+  .signal-name { font-size: 15px; }
+  .signal-count { font-size: 13px; }
+  .action-text { font-size: 15px; }
+  .action-label { font-size: 15px; }
+  .tag-bar { padding: 14px 24px; }
+  .tag-name { font-size: 16px; }
+  .tag-id { font-size: 13px; }
+  .title { font-size: 24px; padding: 24px 24px 12px; }
+  .subtitle { font-size: 15px; padding: 0 24px 20px; }
+  .card-logo-wrap { padding: 0 24px 6px; }
+  .card-logo { height: 36px; }
+  .visual { margin: 0 24px; min-height: 280px; padding: 24px; border-radius: 18px; }
+  .visual-num { font-size: 160px; }
+  .visual-label { font-size: 16px; }
+  .kpi-num { font-size: 36px; }
+  .kpi-num.text { font-size: 20px; }
+  .kpi-num.text.long { font-size: 17px; }
+  .kpi-num.text.xlong { font-size: 14px; }
+  .kpi-label { font-size: 12px; }
+  .kpi { flex: 0 1 calc(33.33% - 6px); }
+  .impact { margin: 20px 24px; padding: 20px 22px; }
+  .impact-text { font-size: 15px; }
+  .impact-text .num { font-size: 17px; }
+  .impact-label { font-size: 16px; }
+  .card-footer { padding: 14px 24px 20px; font-size: 12px; }
+  .link-item { font-size: 13px; padding: 12px 0; }
+  .link-id { font-size: 11px; padding: 3px 10px; min-width: 90px; }
+  .page-divider { font-size: 16px; padding: 12px 20px; }
+}
+
+/* === 桌面 (1080px+, 原始设计) === */
+@media (min-width: 1080px) {
+  body { max-width: 1080px; margin: 0 auto; padding: 60px 50px; }
+  .header { padding: 36px 20px; }
+  .brand-text { font-size: 32px; letter-spacing: 4px; }
+  .brand-bar { width: 50px; height: 6px; }
+  .date { font-size: 22px; }
+  .divider { width: 60px; height: 2px; margin: 16px auto 0; }
+  .logo-img { height: 88px; }
+  .signature { font-size: 16px; letter-spacing: 6px; margin-top: 6px; }
+  .section { padding: 40px 36px; margin-bottom: 28px; border-radius: 24px; }
+  .section-title { font-size: 30px; margin-bottom: 24px; }
+  .section-title::before { width: 8px; height: 30px; margin-right: 14px; }
+  .top5-item { font-size: 22px; margin-bottom: 20px; line-height: 1.6; }
+  .top5-num { font-size: 28px; min-width: 44px; }
+  .signal-grid { gap: 14px; }
+  .signal-card { padding: 22px 24px; border-radius: 14px; }
+  .signal-name { font-size: 22px; margin-bottom: 6px; }
+  .signal-count { font-size: 18px; }
+  .action-box { padding: 26px 30px; border-radius: 12px; }
+  .action-label { font-size: 20px; }
+  .action-text { font-size: 22px; line-height: 1.65; }
+  .card { border-radius: 24px; margin-bottom: 32px; }
+  .tag-bar { padding: 18px 36px; }
+  .tag-name { font-size: 24px; letter-spacing: 2px; }
+  .tag-id { font-size: 16px; }
+  .title { font-size: 38px; padding: 32px 40px 14px; line-height: 1.3; }
+  .subtitle { font-size: 22px; padding: 0 40px 26px; line-height: 1.6; }
+  .card-logo-wrap { padding: 0 40px 6px; }
+  .card-logo { height: 44px; }
+  .visual { margin: 0 40px; min-height: 360px; padding: 30px; border-radius: 20px; }
+  .visual-num { font-size: 200px; }
+  .visual-label { font-size: 20px; bottom: 30px; right: 36px; }
+  .kpi-row { gap: 0; }
+  .kpi-num { font-size: 60px; line-height: 1.1; }
+  .kpi-num.text { font-size: 30px; line-height: 1.15; }
+  .kpi-num.text.long { font-size: 22px; }
+  .kpi-num.text.xlong { font-size: 17px; }
+  .kpi-label { font-size: 16px; margin-top: 12px; }
+  .kpi { flex: 0 1 calc(33.33% - 0px); }
+  .impact { margin: 24px 36px; padding: 24px 28px; }
+  .impact-label { font-size: 20px; margin-bottom: 14px; }
+  .impact-label::before { font-size: 24px; margin-right: 8px; }
+  .impact-text { font-size: 19px; line-height: 1.75; }
+  .impact-text .num { font-size: 21px; }
+  .card-footer { padding: 18px 40px 26px; font-size: 15px; }
+  .links-list { padding: 32px; border-radius: 16px; }
+  .link-item { font-size: 16px; padding: 14px 0; }
+  .link-id { font-size: 14px; padding: 4px 12px; min-width: 110px; }
+  .page-divider { font-size: 22px; padding: 14px 30px; margin: 40px auto 0; }
+}
 </style>
 </head>
 <body>
@@ -104,7 +207,7 @@ body { overflow-x: hidden; }
 <div class="section">
   <div class="section-title">6 板块信号强度</div>
   <div class="signal-grid">
-    <div class="signal-card"><div class="signal-name">A 监管（关税+排放+召回）</div><div class="signal-count">信号 0 个</div></div><div class="signal-card peak"><div class="signal-name">B 大公司动态</div><div class="signal-count">信号 2 个</div></div><div class="signal-card"><div class="signal-name">C 用户风向</div><div class="signal-count">信号 0 个</div></div><div class="signal-card"><div class="signal-name">D 行业数据（销售+市场）</div><div class="signal-count">信号 1 个</div></div><div class="signal-card"><div class="signal-name">E 灾害天气</div><div class="signal-count">信号 1 个</div></div><div class="signal-card"><div class="signal-name">F 渠道与新品</div><div class="signal-count">信号 1 个</div></div>
+    <div class="signal-card"><div class="signal-name">A 监管（关税+排放+召回）</div><div class="signal-count">信号 1 个</div></div><div class="signal-card peak"><div class="signal-name">B 大公司动态</div><div class="signal-count">信号 2 个</div></div><div class="signal-card"><div class="signal-name">C 用户风向</div><div class="signal-count">信号 1 个</div></div><div class="signal-card"><div class="signal-name">D 行业数据（销售+市场）</div><div class="signal-count">信号 1 个</div></div><div class="signal-card"><div class="signal-name">E 灾害天气</div><div class="signal-count">信号 1 个</div></div><div class="signal-card"><div class="signal-name">F 渠道与新品</div><div class="signal-count">信号 1 个</div></div>
   </div>
 </div>
 
